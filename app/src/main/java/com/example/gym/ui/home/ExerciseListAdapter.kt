@@ -29,21 +29,16 @@ class ExerciseListAdapter(
         private val onExerciseClick: (Exercise) -> Unit
     ) : RecyclerView.ViewHolder(itemView) {
         
-        private val exerciseOrder: TextView = itemView.findViewById(R.id.exerciseOrder)
         private val exerciseName: TextView = itemView.findViewById(R.id.exerciseName)
-        private val primaryMuscleTarget: TextView = itemView.findViewById(R.id.primaryMuscleTarget)
-        private val setsReps: TextView = itemView.findViewById(R.id.setsReps)
-        private val weightRange: TextView = itemView.findViewById(R.id.weightRange)
+        private val primaryMuscleTarget: TextView = itemView.findViewById(R.id.focus)
+        private val setsReps: TextView = itemView.findViewById(R.id.sets)
+        private val weightRange: TextView = itemView.findViewById(R.id.intensity)
 
         fun bind(exercise: Exercise) {
-            exerciseOrder.text = exercise.exerciseOrder.ifEmpty { "N/A" }
             exerciseName.text = exercise.exerciseName
-            primaryMuscleTarget.text = exercise.primaryMuscleTarget
-            setsReps.text = "${exercise.sets} sets × ${exercise.reps}"
-            weightRange.text = "${exercise.weightRangeKg} kg"
-            
-            // Debug log to verify exercise order is being set
-            android.util.Log.d("ExerciseAdapter", "Binding exercise: ${exercise.exerciseOrder} - ${exercise.exerciseName}")
+            primaryMuscleTarget.text = "Focus: ${exercise.primaryMuscleTarget}"
+            setsReps.text = "Sets: ${exercise.sets}x${exercise.reps}"
+            weightRange.text = "Weight: ${exercise.weightRangeKg}kg"
             
             itemView.setOnClickListener {
                 onExerciseClick(exercise)

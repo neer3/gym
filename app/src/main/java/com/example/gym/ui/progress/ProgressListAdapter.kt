@@ -1,6 +1,7 @@
 package com.example.gym.ui.progress
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -57,12 +58,12 @@ class ProgressListAdapter(
                 onToggle(item.id, isChecked)
             }
 
-            binding.details.visibility = if (expanded) android.view.View.VISIBLE else android.view.View.GONE
-            binding.btnMore.text = if (expanded) "Hide details" else "More details"
-            binding.btnMore.setOnClickListener {
-                val nowExpanded = binding.details.visibility != android.view.View.VISIBLE
-                binding.details.visibility = if (nowExpanded) android.view.View.VISIBLE else android.view.View.GONE
-                binding.btnMore.text = if (nowExpanded) "Hide details" else "More details"
+            val detailsGroup = listOf(binding.focus, binding.sets, binding.muscles, binding.equipment, binding.alternative, binding.intensity, binding.time)
+            detailsGroup.forEach { it.visibility = if (expanded) View.VISIBLE else View.GONE }
+
+            binding.root.setOnClickListener {
+                val nowExpanded = detailsGroup.first().visibility != View.VISIBLE
+                detailsGroup.forEach { it.visibility = if (nowExpanded) View.VISIBLE else View.GONE }
                 onExpandToggle(nowExpanded)
             }
 
@@ -97,5 +98,3 @@ class ProgressListAdapter(
         }
     }
 }
-
-
