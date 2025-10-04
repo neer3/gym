@@ -9,7 +9,11 @@
         android:id="@+id/nav_home"
         android:name="com.example.gym.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_slideshow"
@@ -28,4 +32,13 @@
         android:name="com.example.gym.ui.history.HistoryFragment"
         android:label="@string/menu_history"
         tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/exerciseDetailFragment"
+        android:name="com.example.gym.ui.exercise.ExerciseDetailFragment"
+        android:label="Exercise Details"
+        tools:layout="@layout/fragment_exercise_detail" >
+        <argument
+            android:name="exerciseId"
+            app:argType="long" />
+    </fragment>
 </navigation>

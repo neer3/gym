@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.gym.R
 import com.example.gym.databinding.FragmentHomeBinding
-import com.example.gym.ui.exercise.ExerciseDetailFragment
 
 class HomeFragment : Fragment() {
 
@@ -37,11 +39,8 @@ class HomeFragment : Fragment() {
     private fun setupRecyclerView() {
         exerciseAdapter = ExerciseListAdapter { exercise ->
             // Navigate to exercise detail
-            val detailFragment = ExerciseDetailFragment.newInstance(exercise.id)
-            parentFragmentManager.beginTransaction()
-                .replace(android.R.id.content, detailFragment)
-                .addToBackStack(null)
-                .commit()
+            val bundle = bundleOf("exerciseId" to exercise.id)
+            findNavController().navigate(R.id.action_nav_home_to_exerciseDetailFragment, bundle)
         }
         
         binding.exerciseRecyclerView.apply {
