@@ -1,0 +1,9 @@
+Exercise_Order,Exercise_Name,Primary_Muscle_Target,Sets,Reps,Weight_Range_kg,Machine_Setup,Rest_Time_Seconds,Machine_Alternative,Free_Weight_Alternative,Form_Cues,Definition_Focus
+A1,Preacher Curl Machine,Biceps Peak Development,4,12-15,20-35,"Arm pad at armpit, chest against pad",20 → A2,Dumbbell Preacher Curls,Incline Dumbbell Curls,"Full stretch, peak contraction, slow negative",Maximum bicep peak
+A2,Tricep Press Machine,All Three Tricep Heads,4,12-15,30-50,"Seat adjusted, back support, full extension",90 → A1,Close-Grip Push-ups,Close-Grip Barbell Press,"Full extension, tricep squeeze, control",Complete tricep development
+B1,Cable Bicep Curls (High Pulley),Biceps Different Angle,3,12-15,20-35,"High pulley, EZ-bar, different angle",20 → B2,Dumbbell Bicep Curls,Barbell Curls,"Different angle, full ROM, squeeze",Bicep from different angle
+B2,Cable Overhead Tricep Extension,Long Head Triceps,3,12-15,20-35,"High pulley, rope, elbows forward",90 → B1,DB Overhead Extension,Barbell Overhead Extension,"Elbows forward, deep stretch, extend",Tricep long head size
+C1,Hammer Curl Machine,"Brachialis, Forearms",3,15-20,15-30,"Neutral grip, arms at sides, control",20 → C2,Dumbbell Hammer Curls,Neutral Grip DB Curls,"Neutral grip, no swing, squeeze","Arm thickness, forearms"
+C2,Dip Machine (Assisted),"Triceps, Lower Chest",3,10-15,40-70 assist,"Lean forward, full range, control negative",90 → C1,Chair Dips,Parallel Bar Dips,"Forward lean, full range, control","Tricep mass, definition"
+D1,Pull-ups (Assisted),"Lats, Rhomboids, Biceps",3,8-12,20-50 assist,"Wide grip, full range, control negative",20 → D2,Lat Pulldown Wide Grip,Pull-ups (Full),"Wide grip, chest up, full range","Upper body width, strength"
+D2,Push-up Variations,"Chest, Triceps, Core",3,12-20,Bodyweight,"Various hand positions, full ROM",90 → D1,Standard Push-ups,Diamond Push-ups,"Various grips, full ROM, control","Endurance, definition"
